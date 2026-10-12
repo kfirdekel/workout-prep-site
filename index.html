@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workout Prep for iPhone · Built for the part before you start</title>
+  <meta name="description" content="Workout Prep for iPhone: plan your sessions, read a short prep brief and pack from a checklist. No account, nothing collected. A one-time purchase with no subscription and no ads.">
+  <meta name="theme-color" content="#090c0b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' rx='230' fill='%23050606'/%3E%3Crect x='140' y='400' width='744' height='388' rx='150' fill='%2335E2A1'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <!-- Loaded first and on purpose without defer: it marks the page for motion before the
+       first paint. If it is missing or fails, every element simply shows, unanimated. -->
+  <script src="assets/site.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="./">
+        <svg class="icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><use href="#app-icon"/></svg>
+        Workout Prep
+      </a>
+      <nav aria-label="Main">
+        <a class="wide-only" href="#how">How it works</a>
+        <a class="wide-only" href="#features">Features</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Workout Prep for iPhone</p>
+          <h1 id="hero-title" class="rise">Built for the part before you start.</h1>
+          <p class="lead rise">Know when it starts, how to get ready and what to pack. Workout Prep gives every session you plan a countdown, a short prep brief and a packing list.</p>
+          <div class="actions">
+            <span class="rise"><a class="btn" href="#how">See how it works</a></span>
+            <div class="store">
+              <!-- App Store badge. Until the app is live, this is a plain status, not a link.
+                   When the app is live:
+                   1. Download Apple's official black "Download on the App Store" badge (English,
+                      SVG) from https://toolbox.marketingtools.apple.com/app-store/ . Use it
+                      unmodified: no recolouring, rotation, cropping or effects.
+                   2. Save it as assets/img/app-store-badge.svg.
+                   3. Replace the <p class="soon"> below with:
+                      <a class="badge" href="APP_STORE_LINK"><img src="assets/img/app-store-badge.svg" width="120" height="40" alt="Download on the App Store"></a>
+                      (APP_STORE_LINK is the app's App Store address.) The .badge style keeps it
+                      40 px tall with 10 px of clear space (a quarter of its height) and never
+                      animates it. Do the same for the second status near the end of the page. -->
+              <p class="soon"><span class="dot" aria-hidden="true"></span>Coming soon to the App Store</p>
+            </div>
+          </div>
+          <p class="meta">One-time purchase. No subscription, no ads, no account.</p>
+        </div>
+        <div class="hero-shot">
+          <img class="screen" src="assets/img/screen-home-summary.jpg" width="600" height="1303" alt="Workout Prep's Summary screen: the next session, a run at 7:30 AM, starts in 5 hours 20 minutes. Below it, readiness shows 0 of 2 ready, the planning streak shows 7 weeks, and Don't Forget lists sunscreen, a sports watch and a water bottle.">
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="intro" data-reveal>
+          <h2 id="how-title">How it works</h2>
+          <p>Three steps, all before the first warm-up.</p>
+        </div>
+        <ol class="steps">
+          <li data-reveal>
+            <article class="card">
+              <span class="step-no" aria-hidden="true">1</span>
+              <h3>Plan</h3>
+              <p>Pick from 81 workout types, then set the day, the start time and how long it lasts. Each session is saved as an event in your own Calendar.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <span class="step-no" aria-hidden="true">2</span>
+              <h3>Prep</h3>
+              <p>Open the session's brief for hydration, stretching and nutrition, and pack from a checklist suggested for that kind of workout.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <span class="step-no" aria-hidden="true">3</span>
+              <h3>Go</h3>
+              <p>Home counts down to your next session and shows what is still left to pack. Turn on a reminder if you like one, from 15 minutes to 2 hours before.</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="bag-title">
+      <div class="wrap split">
+        <div class="intro" data-reveal>
+          <h2 id="bag-title">Your bag, sorted</h2>
+          <p>Every session gets a packing list suggested for its workout type. Tick things off as they go in the bag, add your own, and see at a glance how much is left.</p>
+          <p class="note">This is the list Workout Prep suggests for a run.</p>
+        </div>
+        <div class="demo card" id="kit-demo">
+          <div class="demo-head">
+            <p class="demo-title">Run · Kit</p>
+            <p class="demo-count"><span id="kit-done">9</span> of 9 packed</p>
+          </div>
+          <div class="demo-bar" aria-hidden="true"><span id="kit-bar"></span></div>
+          <ul class="kit" aria-label="Suggested packing list for a run">
+            <li><span>Running shoes</span></li>
+            <li><span>Headphones</span></li>
+            <li><span>Sunscreen</span></li>
+            <li><span>Sunglasses</span></li>
+            <li><span>Sports watch</span></li>
+            <li><span>Water bottle</span></li>
+            <li><span>Towel</span></li>
+            <li><span>Phone</span></li>
+            <li><span>Keys and wallet</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="intro" data-reveal>
+          <h2 id="features-title">Everything before the workout, in one app</h2>
+          <p>Workout Prep doesn't track your training. It gets you ready for it.</p>
+        </div>
+        <ul class="grid">
+          <li data-reveal>
+            <article class="card">
+              <h3>Plan the weeks ahead</h3>
+              <p>See the coming weeks at a glance and add a session in a few taps. Search 81 workout types, from running and yoga to climbing and tennis.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>A prep brief for each session</h3>
+              <p>Short suggestions on hydration, stretching and nutrition, fitted to the workout, its length and its start time.</p>
+              <p class="hint">General fitness suggestions, not medical advice.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>A packing checklist</h3>
+              <p>Suggested for the type of workout, with your own items added. Your progress shows on Home and in a widget.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>A Home that knows what's next</h3>
+              <p>Your next session with a live countdown, how ready you are, your planning streak, and the things not to forget.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>Your Calendar, your reminders</h3>
+              <p>Your plan lives in your own Calendar, and Workout Prep only touches the events it created. Optional reminders arrive 15 minutes to 2 hours before.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>Widgets and Siri</h3>
+              <p>Four widgets: Next Session, Prep Brief, Bag Progress and This Week. Or ask Siri, &ldquo;What&rsquo;s my next workout in Workout Prep?&rdquo;</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="screens-title">
+      <div class="wrap">
+        <div class="intro" data-reveal>
+          <h2 id="screens-title">The app, screen by screen</h2>
+          <p>Real screens from Workout Prep. Swipe or scroll sideways to see them all.</p>
+        </div>
+      </div>
+      <div class="gallery" id="gallery" tabindex="0" role="region" aria-label="Screens from Workout Prep (scrolls sideways)">
+        <ul class="track">
+          <li>
+            <figure>
+              <img class="screen" src="assets/img/screen-prep-brief.jpg" width="480" height="1043" loading="lazy" alt="A prep brief for a 2.5-hour hike: hydration marked Elevated, stretches for the hips, calves and lower back before and after, and nutrition before and after the session.">
+              <figcaption>The prep brief</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img class="screen" src="assets/img/screen-packing-checklist.jpg" width="480" height="1043" loading="lazy" alt="The packing checklist for a hike: hiking boots, map and warm layer ticked off, with headlamp, rain jacket, first aid kit, sunscreen and more still to pack.">
+              <figcaption>The packing checklist</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img class="screen" src="assets/img/screen-upcoming-weeks.jpg" width="480" height="1043" loading="lazy" alt="Upcoming weeks: one card per week for the next two months, each with the number of sessions planned and an icon for each workout.">
+              <figcaption>The weeks ahead</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img class="screen" src="assets/img/screen-week-plan.jpg" width="480" height="1043" loading="lazy" alt="One week day by day: a hike on Sunday, a run on Monday, strength on Wednesday and yoga on Friday, with Add a session on the free days.">
+              <figcaption>One week, day by day</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img class="screen" src="assets/img/screen-workout-library.jpg" width="480" height="1043" loading="lazy" alt="The workout library, starting with cardio: run, walk, cycling, swim, elliptical, rowing and more, with a search field at the bottom.">
+              <figcaption>81 workout types</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img class="screen" src="assets/img/screen-home-screen-widgets.jpg" width="480" height="1043" loading="lazy" alt="Three Workout Prep widgets on the Home Screen: the next session, a run in 5 hours 18 minutes; bag progress, 3 of 9 packed; and the prep brief for the run.">
+              <figcaption>Widgets</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="intro" data-reveal>
+          <h2 id="why-title">Why Workout Prep</h2>
+          <p>Five good reasons to give it a go.</p>
+        </div>
+        <ol class="reasons">
+          <li data-reveal>
+            <article class="card">
+              <h3>Everything before the workout, in one place</h3>
+              <p>The countdown, the brief and the bag for your next session sit together on Home. No juggling notes, lists and alarms.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>Private by design</h3>
+              <p>No account. Nothing leaves the app for us. Workout Prep collects no data about you.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>Pay once</h3>
+              <p>A one-time purchase. No subscription, no ads, and nothing to unlock later.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>Works where you already look</h3>
+              <p>Your plan lives in your own Calendar. Widgets, Siri and optional reminders bring it to you.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <h3>A brief written on your device</h3>
+              <p>When your iPhone supports it, Apple's on-device model writes the brief. When it doesn't, Workout Prep builds it from its own rules. Either way, nothing is sent anywhere.</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="privacy card" data-reveal>
+          <div>
+            <h2 id="privacy-title">Your training stays yours</h2>
+            <p>Workout Prep collects no data about you or your training, and nothing you enter in the app is sent to the developer.</p>
+            <p><a class="text-link" href="privacy.html">Read the privacy policy</a></p>
+          </div>
+          <ul class="ticks">
+            <li>No account and no sign-in</li>
+            <li>No analytics, no ads, no third-party code</li>
+            <li>Sessions are saved in your own Calendar</li>
+            <li>Everything else stays on your iPhone</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="wrap narrow">
+        <h2 id="faq-title" data-reveal>Questions</h2>
+        <div class="faq">
+          <div class="qa" data-reveal>
+            <h3>Do I need an account?</h3>
+            <p>No. Workout Prep has no account and no sign-in, and no server to sign in to.</p>
+          </div>
+          <div class="qa" data-reveal>
+            <h3>Do I need Apple Intelligence for the prep brief?</h3>
+            <p>No. When Apple's on-device model is available, it writes your brief. When it isn't, Workout Prep builds the brief from its own built-in rules. Either way, the brief is made on your device.</p>
+          </div>
+          <div class="qa" data-reveal>
+            <h3>Is there a subscription?</h3>
+            <p>No. Workout Prep is a one-time purchase. There is no subscription, nothing to unlock inside the app, and no ads.</p>
+          </div>
+          <div class="qa" data-reveal>
+            <h3>Where does my data live?</h3>
+            <p>On your iPhone and in your own Calendar. Each session is an event in your Calendar, and your settings and packing lists stay on your device. The developer holds none of your data.</p>
+          </div>
+        </div>
+        <p class="more" data-reveal>More answers on the <a class="text-link" href="support.html">support page</a>.</p>
+      </div>
+    </section>
+
+    <section class="section closing" aria-labelledby="closing-title">
+      <div class="wrap narrow">
+        <svg class="icon big" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><use href="#app-icon"/></svg>
+        <h2 id="closing-title" data-reveal>Get ready for your next workout</h2>
+        <p data-reveal>Plan it, prep it, pack it. Workout Prep for iPhone.</p>
+        <div class="store">
+          <!-- Second App Store status. Swap it for the official badge the same way as the
+               one at the top of the page (see the comment there). -->
+          <p class="soon"><span class="dot" aria-hidden="true"></span>Coming soon to the App Store</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-row">
+        <a class="brand" href="./">
+          <svg class="icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><use href="#app-icon"/></svg>
+          Workout Prep
+        </a>
+        <nav aria-label="Footer">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </nav>
+      </div>
+      <p class="contact">Questions or problems? Email <a href="mailto:kfirapps.support@gmail.com">kfirapps.support@gmail.com</a></p>
+      <p class="legal">Apple, iPhone, Siri and Apple Intelligence are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
+      <p class="legal">&copy; 2026 Workout Prep</p>
+    </div>
+  </footer>
+
+  <!-- The app icon, drawn once and reused above. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="app-icon" viewBox="0 0 1024 1024">
+      <rect width="1024" height="1024" fill="#050606"/>
+      <rect x="140" y="400" width="744" height="388" rx="150" ry="150" fill="#35E2A1"/>
+      <g fill="#0B7A55" fill-rule="evenodd">
+        <path d="M302 412 A 210 210 0 0 1 722 412 L 666 412 A 154 154 0 0 0 358 412 Z"/>
+        <rect x="330" y="400" width="56" height="388" rx="8" ry="8"/>
+        <rect x="638" y="400" width="56" height="388" rx="8" ry="8"/>
+      </g>
+      <rect x="236" y="474" width="552" height="26" rx="13" ry="13" fill="#0A5C41"/>
+    </symbol>
+  </svg>
+</body>
+</html>

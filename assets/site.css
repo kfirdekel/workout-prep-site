@@ -1,0 +1,244 @@
+/* Workout Prep landing page. Loads nothing from other websites. */
+
+:root {
+  color-scheme: dark;
+  --canvas: #090c0b;
+  --surface: #151a18;
+  --line: #25302b;
+  --text: #f2f5f3;
+  --soft: #d4dcd8;
+  --muted: #a7b1ac;
+  --mint: #35e2a1;
+  --on-mint: #05170f;
+  --hero-top: #056642;
+  --hero-bottom: #022a1c;
+  --max: 1080px;
+  --pad: 20px;
+  --radius: 20px;
+}
+@media (min-width: 720px) { :root { --pad: 28px; } }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background:
+    radial-gradient(130% 760px at 50% 0, var(--hero-top), var(--hero-bottom) 58%, rgba(2, 42, 28, 0) 100%) no-repeat,
+    var(--canvas);
+  color: var(--text);
+  font: 17px/1.55 system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+img { max-width: 100%; height: auto; }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -.01em; }
+h2 { margin: 0 0 10px; font-size: clamp(28px, 4.6vw, 40px); }
+h3 { margin: 0 0 6px; font-size: 19px; line-height: 1.3; }
+p { margin: 0 0 12px; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: var(--mint); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+.narrow { max-width: 760px; }
+
+.skip {
+  position: absolute; left: 12px; top: -80px; z-index: 10;
+  padding: 12px 16px; border-radius: 10px;
+  background: var(--mint); color: var(--on-mint); font-weight: 650;
+}
+.skip:focus { top: 12px; }
+
+/* Header and footer */
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  color: var(--text); font-weight: 700; font-size: 18px; text-decoration: none;
+}
+.icon { width: 34px; height: 34px; border-radius: 22%; flex: none; }
+.icon.big { width: 72px; height: 72px; margin: 0 auto 18px; display: block; }
+.site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; }
+.site-header nav a, .site-footer nav a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px;
+  color: var(--soft); font-size: 15px; text-decoration: none;
+}
+.site-header nav a:hover, .site-footer nav a:hover { color: var(--text); text-decoration: underline; }
+@media (max-width: 639px) { .wide-only { display: none !important; } }
+
+.site-footer { border-top: 1px solid var(--line); padding: 28px 0 44px; color: var(--muted); font-size: 15px; }
+.foot-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.site-footer nav { margin-right: -10px; }
+.contact a { display: inline-block; padding: 11px 0; font-weight: 600; overflow-wrap: anywhere; }
+.legal { font-size: 13px; margin-bottom: 6px; }
+
+/* Hero */
+.hero { padding: 24px 0 64px; }
+.hero-grid { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 860px) {
+  .hero { padding: 48px 0 88px; }
+  .hero-grid { grid-template-columns: 1.2fr .8fr; gap: 56px; }
+}
+.eyebrow { margin: 0 0 12px; color: #bff5df; font-size: 15px; font-weight: 650; letter-spacing: .02em; }
+h1 { margin: 0; font-size: clamp(38px, 6.4vw, 64px); line-height: 1.04; letter-spacing: -.025em; }
+.lead { margin: 20px 0 28px; max-width: 34em; color: var(--soft); font-size: clamp(18px, 2.3vw, 21px); }
+span.rise { display: inline-block; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.meta { margin: 18px 0 0; color: var(--soft); font-size: 15px; }
+.hero-shot { width: min(300px, 100%); margin: 0 auto; }
+
+/* A screen from the app: a plain rounded rectangle, straight on, with no device frame. */
+.screen {
+  display: block; width: 100%; height: auto;
+  border-radius: 12.5% / 5.75%;
+  background: var(--surface);
+}
+
+/* Buttons and the App Store status */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 22px; border-radius: 14px;
+  background: var(--mint); color: var(--on-mint);
+  font-weight: 650; text-decoration: none;
+}
+.store { display: inline-flex; }
+/* Not a link: a status until the app is live. Never animated. */
+.soon {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; margin: 0; padding: 0 18px; border-radius: 14px;
+  border: 1.5px dashed rgba(53, 226, 161, .7);
+  background: rgba(9, 12, 11, .55);
+  color: var(--text); font-weight: 600; cursor: default;
+}
+.soon .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); flex: none; }
+/* The official badge, once swapped in: 40 px tall, a quarter of its height as clear space. */
+.badge { display: inline-block; margin: 10px; }
+.badge img { display: block; height: 40px; width: auto; }
+
+/* Sections */
+.section { padding: 56px 0; }
+@media (min-width: 860px) { .section { padding: 80px 0; } }
+.intro { max-width: 640px; margin-bottom: 28px; }
+.intro p { color: var(--muted); font-size: 18px; }
+.intro .note { font-size: 15px; }
+.text-link { display: inline-block; padding: 10px 0; margin: -10px 0; font-weight: 600; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.card h3 { color: var(--mint); }
+.card p { color: var(--soft); font-size: 16px; }
+.card p:last-child { margin-bottom: 0; }
+.card .hint { color: var(--muted); font-size: 14px; }
+
+.steps, .grid, .reasons { display: grid; gap: 16px; }
+.steps > li, .grid > li, .reasons > li { display: flex; }
+.steps .card, .grid .card, .reasons .card { width: 100%; }
+@media (min-width: 720px) {
+  .steps { grid-template-columns: repeat(3, 1fr); }
+  .grid, .reasons { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) { .grid, .reasons { grid-template-columns: repeat(3, 1fr); } }
+.step-no {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; margin-bottom: 14px; border-radius: 50%;
+  background: var(--mint); color: var(--on-mint); font-weight: 700;
+}
+.reasons { counter-reset: reason; }
+.reasons h3::before {
+  counter-increment: reason; content: "0" counter(reason);
+  display: block; margin-bottom: 8px; color: var(--muted); font-size: 14px; font-weight: 650; letter-spacing: .06em;
+}
+
+/* Packing demo */
+.split { display: grid; gap: 8px; align-items: center; }
+@media (min-width: 860px) { .split { grid-template-columns: 1fr 1fr; gap: 56px; } }
+.demo { width: 100%; max-width: 440px; justify-self: center; padding: 20px 20px 8px; }
+.demo-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.demo-title { font-weight: 700; margin: 0; }
+.demo .demo-count { margin: 0; color: var(--muted); font-size: 15px; }
+.demo-bar { height: 6px; margin: 14px 0 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.demo-bar span { display: block; height: 100%; background: var(--mint); transform-origin: left center; }
+.kit li {
+  position: relative; display: flex; align-items: center; min-height: 46px; padding-left: 38px;
+  border-bottom: 1px solid var(--line); font-size: 16px;
+}
+.kit li:last-child { border-bottom: 0; }
+.kit li::before, .kit li::after {
+  content: ""; position: absolute; left: 0; top: 50%; width: 22px; height: 22px; margin-top: -11px; border-radius: 50%;
+}
+.kit li::before { border: 2px solid #5d6a64; }
+.kit li::after {
+  background: var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6 11.5l3.2 3.2L16 8' fill='none' stroke='%2305170f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 22px no-repeat;
+}
+.kit span { position: relative; opacity: .65; }
+.kit span::after {
+  content: ""; position: absolute; left: -2px; right: -2px; top: 54%; height: 1.5px;
+  background: var(--soft); transform-origin: left center;
+}
+.kit li.todo::after { opacity: 0; transform: scale(.5); }
+.kit li.todo span { opacity: 1; }
+.kit li.todo span::after { transform: scaleX(0); }
+
+/* Gallery */
+.gallery {
+  --edge: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad)));
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: var(--edge);
+  padding: 6px var(--edge) 18px;
+  scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+}
+.gallery:focus-visible { outline-offset: -3px; border-radius: 0; }
+.track { display: flex; gap: 20px; width: max-content; }
+.track li { flex: 0 0 240px; scroll-snap-align: start; }
+.track figure { margin: 0; }
+.track figcaption { margin-top: 12px; color: var(--muted); font-size: 15px; text-align: center; }
+
+/* Privacy */
+.privacy { display: grid; gap: 20px; padding: 28px; }
+@media (min-width: 760px) { .privacy { grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: 36px; } }
+.privacy p { color: var(--soft); }
+.ticks li { position: relative; padding: 6px 0 6px 32px; color: var(--text); }
+.ticks li::before {
+  content: ""; position: absolute; left: 2px; top: 11px; width: 16px; height: 9px;
+  border-left: 2.5px solid var(--mint); border-bottom: 2.5px solid var(--mint); transform: rotate(-45deg);
+}
+
+/* FAQ */
+.faq { margin-top: 18px; border-bottom: 1px solid var(--line); }
+.qa { padding: 20px 0 8px; border-top: 1px solid var(--line); }
+.qa h3 { font-size: 18px; }
+.qa p { color: var(--muted); }
+.more { margin-top: 20px; color: var(--muted); }
+
+/* Closing */
+.closing { text-align: center; padding-bottom: 88px; }
+.closing p { color: var(--soft); font-size: 18px; margin-bottom: 24px; }
+
+/* Motion. site.js adds .motion and .pre only when motion is allowed, so with
+   JavaScript off, or with Reduce Motion, everything is simply shown. Only transform
+   and opacity move. The App Store status and badge never do. */
+@keyframes nudge { 0%, 100% { transform: none; } 45% { transform: translateX(-40px); } }
+@media (prefers-reduced-motion: no-preference) {
+  /* Transitions run only toward the shown state, so hiding before a reveal is instant. */
+  .motion .rise:not(.pre) { transition: opacity .42s cubic-bezier(.2, .7, .3, 1), transform .42s cubic-bezier(.2, .7, .3, 1); }
+  .motion .lead.rise { transition-delay: .12s; }
+  .motion .actions .rise { transition-delay: .24s; }
+  .motion .rise.pre { opacity: 0; transform: translateY(12px); }
+  .motion [data-reveal]:not(.pre) { transition: opacity .4s ease, transform .4s ease; }
+  .motion [data-reveal].pre { opacity: 0; transform: translateY(12px); }
+  .motion .kit li:not(.todo)::after, .motion .kit li:not(.todo) span, .motion .kit li:not(.todo) span::after { transition: opacity .25s ease, transform .25s ease; }
+  .motion .ticking .demo-bar span { transition: transform .3s ease; }
+  .motion .track.nudge { animation: nudge 1.1s ease-in-out; }
+
+  .steps .card, .grid .card, .reasons .card { transition: transform .2s ease; }
+  .steps .card:focus-within, .grid .card:focus-within, .reasons .card:focus-within { transform: translateY(-2px); }
+  .btn { transition: transform .12s ease, opacity .12s ease; }
+  .btn:active { transform: scale(.97); opacity: .9; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .steps .card:hover, .grid .card:hover, .reasons .card:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal].pre, .rise.pre { opacity: 1; transform: none; }
+  .kit li.todo::after { opacity: 1; transform: none; }
+  .kit li.todo span { opacity: .65; }
+  .kit li.todo span::after { transform: none; }
+}
